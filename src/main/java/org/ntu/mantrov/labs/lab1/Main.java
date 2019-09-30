@@ -6,7 +6,6 @@ public class Main {
 	public final static int UPPER_BOARD_OF_RANGE = 100;
 
 	public static void main(String[] args) {
-		//sda
 
 		Scanner s = new Scanner(System.in);
 		int n = Methods.inputWith(s); // rows
