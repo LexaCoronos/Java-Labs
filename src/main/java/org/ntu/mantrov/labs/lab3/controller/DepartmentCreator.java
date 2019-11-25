@@ -1,5 +1,7 @@
 package org.ntu.mantrov.labs.lab3.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import org.ntu.mantrov.labs.lab3.Var;
@@ -30,13 +32,13 @@ public class DepartmentCreator {
 		return Var.getRandString(5);
 	}
 
-	private Group[] getDepartmentGroups() {
+	private List<Group> getDepartmentGroups() {
 		System.out.println("Input Department Groups count: ");
 		int count = scanner.nextInt();
-		Group[] groups = new Group[count];
+		List<Group> groups = new ArrayList<>();
 		GroupCreator groupsCreator = new GroupCreator(scanner);
 		for (int i = 0; i < count; i++) {
-			groups[i] = groupsCreator.createGroup();
+			groups.add(groupsCreator.createGroup());
 		}
 		return groups;
 	}

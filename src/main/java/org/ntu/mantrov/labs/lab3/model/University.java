@@ -1,17 +1,21 @@
 package org.ntu.mantrov.labs.lab3.model;
 
-import java.util.Arrays;
+import java.util.List;
 
 public class University {
 
 	private String name;
 	private int index;
-	private Faculty[] facultys;
+	private List<Faculty> facultys;
 	
-	public University(String name, int index, Faculty[] facultys) {
+	public University(String name, int index, List<Faculty> facultys) {
 		this.name = name;
 		this.index = index;
 		this.facultys = facultys;
+	}
+	
+	public int getCountFacultys() {
+		return this.facultys.size();
 	}
 	
 	public void setName(String name) {
@@ -30,13 +34,13 @@ public class University {
 		return this.index;
 	}
 	
-	public Faculty[] getFaculty() {
+	public List<Faculty> getFaculty() {
 		return this.facultys;
 	}
 	
 	@Override
 	public String toString() {
-		return "University {name=" + name + ", index=" + index + ", facultys=" + Arrays.toString(facultys) + "}\n";
+		return "University {name=" + name + ", index=" + index + ", facultys=" + facultys.toString() + "}\n";
 	}
 	
 }

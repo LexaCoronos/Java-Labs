@@ -1,5 +1,7 @@
 package org.ntu.mantrov.labs.lab3.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import org.ntu.mantrov.labs.lab3.Var;
@@ -30,13 +32,13 @@ public class GroupCreator {
 		return Var.getRandString(5);
 	}
 
-	private Student[] getGroupStudents() {
+	private List<Student> getGroupStudents() {
 		System.out.println("Input Group Students count: ");
 		int count = scanner.nextInt();
-		Student[] students = new Student[count];
+		List<Student> students = new ArrayList<>();
 		StudentCreator studentsCreator = new StudentCreator(scanner);
 		for (int i = 0; i < count; i++) {
-			students[i] = studentsCreator.createStudent();
+			students.add(studentsCreator.createStudent());
 		}
 		return students;
 	}

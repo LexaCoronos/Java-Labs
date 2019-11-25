@@ -1,5 +1,7 @@
 package org.ntu.mantrov.labs.lab3.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import org.ntu.mantrov.labs.lab3.Var;
@@ -30,13 +32,13 @@ public class FacultyCreator {
 		return Var.getRandString(5);
 	}
 	
-	private Department[] getFacultyDepartments() {
+	private List<Department> getFacultyDepartments() {
 		System.out.println("Input Faculty Departments count: ");
 		int count = scanner.nextInt();
-		Department[] departments = new Department[count];
+		List<Department> departments = new ArrayList<>();
 		DepartmentCreator departmentCreator = new DepartmentCreator(scanner);
 		for (int i = 0; i < count; i++) {
-			departments[i] = departmentCreator.createDepartment();
+			departments.add(departmentCreator.createDepartment());
 		}
 		return departments;
 	}
