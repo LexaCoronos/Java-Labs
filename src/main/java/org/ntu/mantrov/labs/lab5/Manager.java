@@ -3,7 +3,6 @@ package org.ntu.mantrov.labs.lab5;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 import org.ntu.mantrov.labs.lab5.controller.AdressCreator;
 import org.ntu.mantrov.labs.lab5.controller.CitizenCreator;
@@ -60,8 +59,5 @@ public class Manager {
 		.filter(adress -> adress.getStreet().charAt(0) == firstSymbol)
 		.map(Adress :: getStreet)
 		.forEach(it -> System.out.println("Street: " + it));
-				//.collect(Collectors.toList());
-		
-		//System.out.println(streetList.toString());
 	}
 }

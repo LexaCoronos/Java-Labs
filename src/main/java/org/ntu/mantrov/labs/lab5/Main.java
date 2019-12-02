@@ -1,10 +1,8 @@
 package org.ntu.mantrov.labs.lab5;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 import org.ntu.mantrov.labs.lab5.model.Adress;
 import org.ntu.mantrov.labs.lab5.model.Citizen;
