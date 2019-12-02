@@ -45,4 +45,9 @@ public class Citizen {
 	public void setAdress(Adress adress) {
 		this.adress = adress;
 	}
+	
+	@Override
+	public String toString() {
+		return "Name: " + this.name + " | Age: " + this.age + " | Sex: " + this.sex + " | Adress: [" + this.adress + "]";
+	}
 }

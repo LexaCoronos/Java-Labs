@@ -2,17 +2,27 @@ package org.ntu.mantrov.labs.lab5.model;
 
 public enum Sex {
 	
-	MALE("Мужчина", "Man", "Чоловiк"),
-	FEMALE("Девушка", "Woman", "Жiнка");
+	MALE(1, "Мужчина", "Man", "Чоловiк"),
+	FEMALE(2, "Девушка", "Woman", "Жiнка");
 	
+	private int value;
 	private String ru;
 	private String en;
 	private String ua;
 	
-	Sex(String ru, String en, String ua) {
+	Sex(int value, String ru, String en, String ua) {
+		this.value = value;
 		this.ru = ru;
 		this.en = en;
 		this.ua = ua;
+	}
+
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
 	}
 
 	public String getRu() {

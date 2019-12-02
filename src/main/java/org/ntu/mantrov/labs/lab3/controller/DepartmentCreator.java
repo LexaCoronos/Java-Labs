@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import org.ntu.mantrov.labs.lab3.Var;
+import org.ntu.mantrov.labs.lab3.GenerateVariables;
 import org.ntu.mantrov.labs.lab3.model.Department;
 import org.ntu.mantrov.labs.lab3.model.Group;
 
@@ -23,13 +23,13 @@ public class DepartmentCreator {
 	private int getDepartmentIndex() {
 //		System.out.println("Input Department index: ");
 //		return scanner.nextInt();
-		return Var.getRandInt(20);
+		return GenerateVariables.getRandInt(20);
 	}
 
 	private String getDepartmentName() {
 //		System.out.println("Input Department name: ");
 //		return scanner.next();
-		return Var.getRandString(5);
+		return GenerateVariables.getRandString(5);
 	}
 
 	private List<Group> getDepartmentGroups() {

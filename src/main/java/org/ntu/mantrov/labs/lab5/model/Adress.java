@@ -1,30 +1,17 @@
 package org.ntu.mantrov.labs.lab5.model;
 
-import java.util.List;
-
 public class Adress {
 
-	private List<Citizen> list;
 	private String city;
 	private String street;
 	private int build;
 	private int apartment;
 
-	public Adress(List<Citizen> list, String city, String street, int build, int apartment) {
-		super();
-		this.list = list;
+	public Adress(String city, String street, int build, int apartment) {
 		this.city = city;
 		this.street = street;
 		this.build = build;
 		this.apartment = apartment;
-	}
-
-	public List<Citizen> getList() {
-		return list;
-	}
-
-	public void setList(List<Citizen> list) {
-		this.list = list;
 	}
 
 	public String getCity() {
@@ -57,6 +44,11 @@ public class Adress {
 
 	public void setApartment(int apartment) {
 		this.apartment = apartment;
+	}
+
+	@Override
+	public String toString() {
+		return "City: " + this.city + " | Street: " + this.street + " | build: " + this.build + " | apartment: " + this.apartment;
 	}
 
 }

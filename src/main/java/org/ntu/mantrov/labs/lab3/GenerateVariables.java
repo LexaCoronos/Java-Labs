@@ -2,7 +2,7 @@ package org.ntu.mantrov.labs.lab3;
 
 import java.util.Random;
 
-public class Var {
+public class GenerateVariables {
 	
 	public static String getRandString(Integer maxlength) {
 		String chars = "qazxswedcvfrtgbnhyujmkiolp1234567890QAZXSWEDCVFRTGBNHYUJMKIOLP";
