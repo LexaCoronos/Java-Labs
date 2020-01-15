@@ -1,2 +1,2 @@
 # Java-Labs
-My labs for Java language programming of 4 course
+My labs work for Java language programming of 4 course
